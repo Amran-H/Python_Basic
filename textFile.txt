@@ -1,3 +1,1 @@
-Hi! My name is Amran. 
-
-I am learning python.
+This is Amran from NSTU. Address: 5th floor, Administrative building
