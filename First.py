@@ -432,25 +432,27 @@
 
 
 # -------------------------------------------------30-10-24 ---------------------------------
-items_list = { 
-               "Apple": 10,
-               "Mango": 15,
-               "Banana": 20,
-               "Orange": 18
-               }
+# items_list = { 
+#                "Apple": 10,
+#                "Mango": 15,
+#                "Banana": 20,
+#                "Orange": 18
+#                }
 
-# total_cost=0
-# for item in items_list:
-#     total_cost=sum(items_list.values())
-# print(total_cost)
+# # total_cost=0
+# # for item in items_list:
+# #     total_cost=sum(items_list.values())
+# # print(total_cost)
 
-most_expensive_item = ""
-most_expensive_price = 0
-for item, price in items_list.items():
-    if price > most_expensive_price:
-        most_expensive_price =price
-        most_expensive_item = item
-print(items_list.items())
+# most_expensive_item = ""
+# most_expensive_price = 0
+# for item, price in items_list.items():
+#     if price > most_expensive_price:
+#         most_expensive_price =price
+#         most_expensive_item = item
+# print(most_expensive_item, ":", most_expensive_price)
 
-print(most_expensive_item, ":", most_expensive_price)
+
+# class starts here. Above contents are my practice
+
 
