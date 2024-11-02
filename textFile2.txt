@@ -1,1 +1,4 @@
-Hi this a automated file. I generated this file using the write function. It is the second day I am learning the file handling in Python. And it keeps on getting interesting!
+Hi this a automated file.
+I generated this file using the write function.
+It is the second day I am learning the file handling in Python.
+And it keeps on getting interesting!
