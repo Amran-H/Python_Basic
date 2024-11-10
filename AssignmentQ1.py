@@ -1,38 +1,43 @@
-def is_prime(n):
-    """Check if a number is prime."""
-    flag=0
-    if n<=1:
-        return False
-    for i in range(2, n):
-        if n%i==0:
-            flag=1
-            break
-    return flag==0
+# Input dimensions of the first matrix
+rows1 = int(input("Enter the number of rows of the first matrix: "))
+cols1 = int(input("Enter the number of columns of the first matrix: "))
 
-def prime_factors(n):
-    """Return a list of unique prime factors of n."""
-    factors = []
-    divisor = 2
-    while n > 1:
-        if n % divisor == 0:
-            if is_prime(divisor):
-                if divisor not in factors:
-                    factors.append(divisor)
-            n //= divisor
-        else:
-            divisor += 1
-    return factors
+# Initialize the first matrix with zeros
+matrix1 = [[0 for _ in range(cols1)] for _ in range(rows1)]
 
-def main():
-    number = int(input("Enter a positive integer greater than 3: "))
-    if number <= 3:
-        print("The number must be greater than 3.")
-    else:
-        factors = prime_factors(number)
-        if factors:
-            print(f"The prime factors are: {factors}")
-        else:
-            print("No prime factors found.")
+# Input elements for the first matrix
+print("\nEnter elements of the first matrix:")
+for i in range(rows1):
+    for j in range(cols1):
+        matrix1[i][j] = int(input(f"Enter element [{i+1}][{j+1}] for matrix 1: "))
 
-if __name__ == "__main__":
-    main()
+# Input dimensions of the second matrix
+rows2 = int(input("\nEnter the number of rows of the second matrix: "))
+cols2 = int(input("Enter the number of columns of the second matrix: "))
+
+# Check if matrix multiplication is possible
+if cols1 != rows2:
+    print("\nMatrix multiplication not possible. The number of columns in the first matrix must equal the number of rows in the second matrix.")
+else:
+    # Initialize the second matrix with zeros
+    matrix2 = [[0 for _ in range(cols2)] for _ in range(rows2)]
+
+    # Input elements for the second matrix
+    print("\nEnter elements of the second matrix:")
+    for i in range(rows2):
+        for j in range(cols2):
+            matrix2[i][j] = int(input(f"Enter element [{i+1}][{j+1}] for matrix 2: "))
+
+    # Initialize the result matrix with zeros
+    result_matrix = [[0 for _ in range(cols2)] for _ in range(rows1)]
+
+    # Perform matrix multiplication
+    for i in range(rows1):
+        for j in range(cols2):
+            for k in range(cols1):
+                result_matrix[i][j] += matrix1[i][k] * matrix2[k][j]
+
+    # Display the resulting matrix
+    print("\nThe resulting matrix after multiplication is:")
+    for row in result_matrix:
+        print(row)
