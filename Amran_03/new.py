@@ -1,4 +1,4 @@
-n = int(input("Enter your numner: "))
+n = int(input("Enter your number: "))
 def fibo(n):
   if (n<=0):
     print("Invalid input")

@@ -17,3 +17,17 @@ for i in range(len(primes)):
     if primes[i] == True:
         prime_numbers.append(i)
 print(prime_numbers)
+
+
+
+# for single number checking
+# flag=0
+# for i in range(2, int(n**.5)+1):
+#     if n%i==0:
+#         flag=1
+#         break
+        
+# if n>1 and flag==0:
+#     print("Prime")
+# else:
+#     print("Not prime")
